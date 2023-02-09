@@ -1,0 +1,8 @@
+package com.spn.SpringTestConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+public class sugarless {
+
+	private String brand;
+}

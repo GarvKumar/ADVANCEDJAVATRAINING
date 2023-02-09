@@ -1,0 +1,40 @@
+package garv;
+
+import java.sql.*;  //step 1
+
+public class jdbcclass2 {
+
+	public static void main(String args[]) throws SQLException, ClassNotFoundException
+	    {
+	        String url="jdbc:mysql://localhost:3306/garv";
+	        String uname="root";
+	        String pass="root";
+	        String query
+	            = "insert into student values(9, 'Parul', 'M.Tech Int.')";
+	        String query1="select name from student where=9";
+	 
+	        // Load driver class
+	        Class.forName("com.mysql.cj.jdbc.Driver");
+	 
+	        // Obtain a connection
+	        Connection con = DriverManager.getConnection(
+	            url, uname, pass);
+	 
+	        // Obtain a statement
+	        Statement st = con.createStatement();
+	 
+	        // Execute the query
+	        int count = st.executeUpdate(query);
+	        ResultSet rs=st.executeQuery(query1);
+	        System.out.println(
+	            "number of rows affected by this query= "
+	            + count);
+	        rs.next();
+	        String name=rs.getString("name");
+	        System.out.println(name);
+	        // Closing the connection as per the
+	        // requirement with connection is completed
+	        st.close();
+	        con.close();
+	    }
+}

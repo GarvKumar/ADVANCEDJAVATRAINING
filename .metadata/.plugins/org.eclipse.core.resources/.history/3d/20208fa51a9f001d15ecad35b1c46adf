@@ -1,0 +1,76 @@
+package com.serv;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class P_No18_Marksheet extends HttpServlet {
+		
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			String name=request.getParameter("name");
+			String email=request.getParameter("mail");
+			String phone=request.getParameter("mobile");
+			String rollno=request.getParameter("rollno");
+			String course=request.getParameter("course");
+			String branch=request.getParameter("branch");
+			String s1=request.getParameter("s1");
+			String s2=request.getParameter("s2");
+			String s3=request.getParameter("s3");
+			String s4=request.getParameter("s4");
+			String s5=request.getParameter("s5");
+			
+			String url="jdbc:mysql://localhost:3306/ajp";
+			String uname="root";
+			String pass=uname;
+			PrintWriter out=response.getWriter();
+			response.setContentType("text/html");
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				Connection con=DriverManager.getConnection(url,uname,pass); //step3
+				String sql= "insert into marksheet values(?,?,?,?,?,?,?,?,?,?,?)";
+				PreparedStatement ps= con.prepareStatement(sql);
+				ps.setString(1, name);
+				ps.setString(2, email);
+				ps.setString(3, phone);
+				ps.setString(4, rollno);
+				ps.setString(5, course);
+				ps.setString(6, branch);
+				ps.setString(7, s1);
+				ps.setString(8, s2);
+				ps.setString(9, s3);
+				ps.setString(10, s4);
+				ps.setString(11, s5);
+				
+				int i=ps.executeUpdate();
+				if(i>0) {
+					out.print("Successfully Submitted");
+				}
+				
+				String query="select * from marksheet";
+				ResultSet rs=ps.executeQuery(query); //step5
+				out.print("\n<div align='center'><h1>Marksheet</h1></div><table border='2'>");
+				out.print("<tr>");
+				out.print("<td>Name</td><td>E-Mail</td><td>Phone</td><td>Roll No</td><td>Course</td><td>Branch</td><td>Subject1</td><td>Subject2</td><td>Subject3</td><td>Subject4</td><td>Subject5</td></tr>");
+				out.print("</tr>");
+		        while (rs.next()) {
+		        	out.print("<tr>");
+		            out.print("<td>"+rs.getString(1)+ "</td><td>"+ rs.getString(2)+ "</td><td>"+ rs.getString(3)+"</td><td>"+ 
+		        	rs.getString(4)+"</td><td>"+ rs.getString(5)+"</td><td>"+ rs.getString(6)+"</td><td>"+rs.getString(7)+"</td><td>"+rs.getString(8)+"</td><td>"+rs.getString(9)+"</td><td>"+rs.getString(10)+"</td><td>"+rs.getString(11)+"</td><tr>");
+		        }
+		        out.print("</table>");
+			} catch (Exception e) {
+				out.print(e);
+			}
+			
+		}
+
+	}
+

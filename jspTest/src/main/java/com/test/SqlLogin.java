@@ -1,0 +1,91 @@
+package com.test;
+import java.sql.*;
+public class SqlLogin {
+public static void main(String[] args) {
+// Declare the JDBC objects
+Connection conn = null;
+Statement stmt = null;
+ResultSet rs = null;
+try{
+//Step 1. Register the JDBC driver
+Class.forName("com.mysql.jdbc.Driver");
+//Step 2. Open a connection
+System.out.println("Connecting to a selected database...");
+conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "root", "");
+System.out.println("Connected database successfully...");
+//Step 3. Create the employee table
+System.out.println("Creating the employee table in given database...");
+stmt = conn.createStatement();
+String sql = "CREATE TABLE IF NOT EXISTS employee" +
+"(id INTEGER not NULL, " +
+" first VARCHAR(255), " +
+" last VARCHAR(255), " +
+" age INTEGER, " +
+" PRIMARY KEY ( id ))";
+stmt.executeUpdate(sql);
+System.out.println("Created table in given database...");
+//Step 4. Add 5 rows in the table
+System.out.println("Inserting records into the table...");
+sql = "INSERT INTO employee " +
+"VALUES (1, 'John', 'Doe', 30)";
+stmt.executeUpdate(sql);
+sql = "INSERT INTO employee " +
+"VALUES (2, 'Will', 'Smith', 35)";
+stmt.executeUpdate(sql);
+sql = "INSERT INTO employee " +
+"VALUES (3, 'Jane', 'Doe', 25)";
+stmt.executeUpdate(sql);
+sql = "INSERT INTO employee " +
+"VALUES (4, 'John', 'Wick', 40)";
+stmt.executeUpdate(sql);
+sql = "INSERT INTO employee " +
+"VALUES (5, 'Mary', 'Poppins', 45)";
+stmt.executeUpdate(sql);
+System.out.println("Inserted records into the table...");
+//Step 5. Update one row
+System.out.println("Updating records in the table...");
+sql = "UPDATE employee SET age=32 WHERE id=1";
+stmt.executeUpdate(sql);
+System.out.println("Updated records in the table...");
+//Step 6. Show the employee2 status
+System.out.println("Showing the employee2 status...");
+sql = "SELECT id, first, last, age FROM employee WHERE id=2";
+rs = stmt.executeQuery(sql);
+while(rs.next()){
+int id = rs.getInt("id");
+int age = rs.getInt("age");
+String first = rs.getString("first");
+String last = rs.getString("last");
+System.out.println("ID: " + id);
+System.out.println("Name: " + first + " " + last);
+System.out.println("Age: " + age);
+}
+System.out.println("Showed the employee2 status...");
+//Step 7. Clean-up environment
+rs.close();
+stmt.close();
+conn.close();
+}catch(SQLException se){
+//Handle errors for JDBC
+se.printStackTrace();
+}catch(Exception e){
+//Handle errors for Class.forName
+e.printStackTrace();
+}finally{
+//finally block used to close resources
+try{
+if(stmt!=null)
+stmt.close();
+}catch(SQLException se2){
+}// nothing we can do
+try{
+if(conn!=null)
+conn.close();
+}catch(SQLException se){
+se.printStackTrace();
+}//end finally try
+}//end try
+System.out.println("Goodbye!");
+}
+}
+

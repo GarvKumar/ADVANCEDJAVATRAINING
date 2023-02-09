@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Page</title>
+</head>
+<body>
+<pre>
+34.	Write a JSP which insert the details of the 3 or 4 users who register with the web site 
+by using registration form. 
+Authenticate the user when he submits the login form using the user’s name and password from the database. 
+Design and implement a simple shopping cart example with session tracking API
+</pre>
+
+<form method = "post" action = "Registration.jsp">
+<pre>
+Enter four UsersName and password !!!!
+
+Enter your UserName : <input type = "text" name = "name1">
+Enter your PassWord : <input type = "text" name = "pass1">
+
+Enter your UserName : <input type = "text" name = "name2">
+Enter your PassWord : <input type = "text" name = "pass2">
+
+Enter your UserName : <input type = "text" name = "name3">
+Enter your PassWord : <input type = "text" name = "pass3">
+
+Enter your UserName : <input type = "text" name = "name4">
+Enter your PassWord : <input type = "text" name = "pass4">
+
+<button type = "submit"> Register Users </button>
+</pre>
+</form>
+
+<a href = "/JPSProgrmaFiles/UserLogin.jsp"><button>Click here to Login!</button></a>
+
+</body>
+</html>

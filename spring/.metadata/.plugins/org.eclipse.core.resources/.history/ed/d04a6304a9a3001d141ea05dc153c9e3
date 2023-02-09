@@ -1,0 +1,23 @@
+package com.spn.SpringTestConstructor;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.spn.springdemo1.Car;
+import com.spn.springdemo1.Tyre;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        ApplicationContext context =new ClassPathXmlApplicationContext("spring.xml");
+        Mango m=(Mango)context.getBean("mango");
+        System.out.println(m);
+        
+    }
+}

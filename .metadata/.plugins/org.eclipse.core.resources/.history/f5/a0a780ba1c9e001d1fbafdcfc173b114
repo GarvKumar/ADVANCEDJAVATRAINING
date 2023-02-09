@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3> 12.Write a program that takes three input as: User Name, User Password and User Mobile from html form and 
+access these data by using servlet also display these details on browser.</h3>
+<form method = "post" action = "getdetails">
+
+	<h2> Enter your Name: <input type = "text" name = "name"> </h2>
+	<h2> Enter your PassWord: <input type = "text" name = "pass"> </h2>
+	<h2> Enter your MobileNumber: <input type = "text" name = "number"> </h2>
+	
+	<button type = "submit">Submit</button>
+</form>
+
+
+
+</body>
+</html>

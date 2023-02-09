@@ -1,0 +1,5 @@
+package com.spn.SpringTestConstructor;
+
+public interface fruits {
+
+}

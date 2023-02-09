@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Solution No. 13</title>
+</head>
+<body>
+<h3>13.	Write a servlet program to select the details of an employee (empid, empname, empadd,empphone) and <br>
+ display on browser in appropriate format.</h3>
+ 
+<form action = "fetchdata" method = "post">
+
+<button type= "submit">Click to fetch data from Employee table</button>
+
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+127.0.0.1 - - [01/Feb/2023:12:07:26 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Feb/2023:12:07:37 +0530] "GET /SpringMVCJava/index.jsp HTTP/1.1" 200 59
+0:0:0:0:0:0:0:1 - - [01/Feb/2023:12:07:39 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [01/Feb/2023:12:14:04 +0530] "GET /SpringMVCJava/index.jsp HTTP/1.1" 200 59
+0:0:0:0:0:0:0:1 - - [01/Feb/2023:12:24:24 +0530] "GET /SpringMVCJava/index.jsp HTTP/1.1" 200 61

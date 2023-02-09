@@ -1,0 +1,60 @@
+package com.hw;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class P_No18_Feedback extends HttpServlet {
+		
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			String name=request.getParameter("name");
+			String email=request.getParameter("mail");
+			String phone=request.getParameter("mobile");
+			String feedback=request.getParameter("feed");
+			
+			String url="jdbc:mysql://localhost:3306/ajp";
+			String uname="root";
+			String pass=uname;
+			PrintWriter out=response.getWriter();
+			response.setContentType("text/html");
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				Connection con=DriverManager.getConnection(url,uname,pass); //step3
+				String sql= "insert into feedback values(?,?,?,?)";
+				PreparedStatement ps= con.prepareStatement(sql);
+				ps.setString(1, name);
+				ps.setString(2, email);
+				ps.setString(3, phone);
+				ps.setString(4, feedback);
+				
+				int i=ps.executeUpdate();
+				if(i>0) {
+					out.print("Successfully Submitted");
+				}
+				
+				String query="select * from feedback";
+				ResultSet rs=ps.executeQuery(query); //step5
+				out.print("\n<table border='2'>");
+				out.print("<tr>");
+				out.print("<td>Name</td><td>E-Mail</td><td>Phone</td><td>Feedback</td>");
+				out.print("</tr>");
+		        while (rs.next()) {
+		        	out.print("<tr>");
+		            out.println("<td>"+rs.getString(1)+ "</td><td>"+ rs.getString(2)+ "</td><td>"+ rs.getString(3)+"</td><td>"+ rs.getString(4)+"</td></tr>");
+		        }
+		        out.print("</table>");
+			} catch (Exception e) {
+				out.print(e);
+			}
+			
+		}
+
+	}

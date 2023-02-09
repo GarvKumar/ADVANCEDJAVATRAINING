@@ -1,0 +1,8 @@
+package com.spn.SpringAnno;
+
+public class MediaTech implements MobileProcessor{
+	void process() {
+		System.out.println("2nd best Cpu");
+	}
+
+}

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <servlet>
+	<servlet-name>myserv1</servlet-name>
+	<servlet-class>com.serv.hello</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myserv1</servlet-name>
+	<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	<servlet-name>myserv2</servlet-name>
+	<servlet-class>com.serv.setCookies</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myserv2</servlet-name>
+	<url-pattern>/setCookies</url-pattern>
+	</servlet-mapping> 
+	
+	
+	
+	
+	<servlet>
+	<servlet-name>myser3</servlet-name>
+	<servlet-class>com.serv.generic</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser3</servlet-name>
+	<url-pattern>/generic</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+	<servlet-name>myser4</servlet-name>
+	<servlet-class>com.serv.HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser4</servlet-name>
+	<url-pattern>/helloServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>myser5</servlet-name>
+	<servlet-class>com.serv.GetDetailsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser5</servlet-name>
+	<url-pattern>/getdetails</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>myser6</servlet-name>
+	<servlet-class>com.serv.FetchDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser6</servlet-name>
+	<url-pattern>/fetchdata</url-pattern>
+	</servlet-mapping>
+	 
+	<servlet>
+	<servlet-name>myser7</servlet-name>
+	<servlet-class>com.serv.AddCookiesValueServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser7</servlet-name>
+	<url-pattern>/addcookiesval</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	<servlet-name>myser8</servlet-name>
+	<servlet-class>com.serv.DisplaySetCookies</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser8</servlet-name>
+	<url-pattern>/DisplaySetCookies</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>myser9</servlet-name>
+	<servlet-class>com.serv.q_no15</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser9</servlet-name>
+	<url-pattern>/q_no15</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>myser10</servlet-name>
+	<servlet-class>com.serv.AuthencationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser10</servlet-name>
+	<url-pattern>/myauth</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+	<servlet-name>myser11</servlet-name>
+	<servlet-class>com.serv.ValidServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myser11</servlet-name>
+	<url-pattern>/validation</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    <description></description>
+    <display-name>P_No16</display-name>
+    <servlet-name>P_No16</servlet-name>
+    <servlet-class>com.serv.P_No16</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>P_No16</servlet-name>
+    <url-pattern>/P_No16</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>P_No16_Registration</display-name>
+    <servlet-name>P_No16_Registration</servlet-name>
+    <servlet-class>com.serv.P_No16_Registration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>P_No16_Registration</servlet-name>
+    <url-pattern>/P_No16_Registration</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>P_No18_Feedback</display-name>
+    <servlet-name>P_No18_Feedback</servlet-name>
+    <servlet-class>com.serv.P_No18_Feedback</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>P_No18_Feedback</servlet-name>
+    <url-pattern>/P_No18_Feedback</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>P_No18_Admission</display-name>
+    <servlet-name>P_No18_Admission</servlet-name>
+    <servlet-class>com.serv.P_No18_Admission</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>P_No18_Admission</servlet-name>
+    <url-pattern>/P_No18_Admission</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>P_No18_Login</display-name>
+    <servlet-name>P_No18_Login</servlet-name>
+    <servlet-class>com.serv.P_No18_Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>P_No18_Login</servlet-name>
+    <url-pattern>/P_No18_Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>P_No18_Marksheet</display-name>
+    <servlet-name>P_No18_Marksheet</servlet-name>
+    <servlet-class>com.serv.P_No18_Marksheet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>P_No18_Marksheet</servlet-name>
+    <url-pattern>/P_No18_Marksheet</url-pattern>
+  </servlet-mapping>
+	
+	
+</web-app>

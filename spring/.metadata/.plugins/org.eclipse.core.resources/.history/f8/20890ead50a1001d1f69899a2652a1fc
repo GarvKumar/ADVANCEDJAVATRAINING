@@ -1,0 +1,9 @@
+package com.spn.SpringAnno;
+
+public class Appconfig {
+	@Bean
+	public Samsung getPhone() {
+		return new Samsung();
+	}
+
+}

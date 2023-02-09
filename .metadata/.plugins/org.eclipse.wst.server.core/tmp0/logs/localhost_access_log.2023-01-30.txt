@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:09:44:54 +0530] "GET /AdavancedJavaTraining/helloServlet.html HTTP/1.1" 200 477
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:09:45:20 +0530] "POST /AdavancedJavaTraining/helloServlet HTTP/1.1" 200 51
+127.0.0.1 - - [30/Jan/2023:09:50:07 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:09:50:09 +0530] "GET /AdavancedJavaTraining/setCookies.html HTTP/1.1" 200 403
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:09:50:44 +0530] "POST /AdavancedJavaTraining/setCookies HTTP/1.1" 200 71
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:09:52:00 +0530] "GET /AdavancedJavaTraining/generic.html HTTP/1.1" 200 364
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:09:53:38 +0530] "POST /AdavancedJavaTraining/generic HTTP/1.1" 200 55
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:10:22:47 +0530] "GET /AdavancedJavaTraining/hello.html HTTP/1.1" 200 341
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:10:23:11 +0530] "POST /AdavancedJavaTraining/test HTTP/1.1" 200 45
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:10:23:27 +0530] "POST /AdavancedJavaTraining/test HTTP/1.1" 200 45
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:10:28:34 +0530] "POST /AdavancedJavaTraining/helloServlet HTTP/1.1" 200 45
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:10:31:32 +0530] "GET /AdavancedJavaTraining/getdetails.html HTTP/1.1" 200 637
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:10:31:45 +0530] "POST /AdavancedJavaTraining/getdetails HTTP/1.1" 200 76
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:10:37:12 +0530] "GET /AdavancedJavaTraining/fetchdata.html HTTP/1.1" 200 425
+0:0:0:0:0:0:0:1 - - [30/Jan/2023:10:37:39 +0530] "POST /AdavancedJavaTraining/fetchdata HTTP/1.1" 200 77

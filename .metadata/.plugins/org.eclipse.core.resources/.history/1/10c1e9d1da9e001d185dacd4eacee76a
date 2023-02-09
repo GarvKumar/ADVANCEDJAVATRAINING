@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" %>
+<!-- Drective tag --><%@page import="java.util.*,java.util.Random" %> 
+ <!-- errorPage="error.jsp">-->
+ <%@page import="java.sql.*"%>
+
+ 
+ 
+<%@include file="header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>add one page too another</title>
+</head>
+<body bgcolor="cyan">
+<h1>ques no 1 add one page to another page</h1>
+
+  <!--  Declaration tag --> 
+  <%!
+   int var=12;   
+    %>
+	 
+<!--  Scriptlet tag -->	
+ <%
+   // int i=Integer.parseInt(request.getParameter("num1"));
+  //int j=Integer.parseInt(request.getParameter("num2"));
+	//int k=i+j;
+	//out.println("Sum of numbers is : " +k);
+	//pageContext.setAttribute("name","garv",PageContext.SESSION_SCOPE);
+  //int l=9/0;
+	%>
+	
+	<br>
+<!--  Expression tag -->	My number is when it will declare  :<%= var  %>
+</body>
+</html>

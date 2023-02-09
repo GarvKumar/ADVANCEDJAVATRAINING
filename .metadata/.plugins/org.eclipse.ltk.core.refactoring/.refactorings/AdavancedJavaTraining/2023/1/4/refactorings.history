@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AdavancedJavaTraining/src/main/webapp/setcokkie.html&apos; to &apos;setCookies.html&apos;" description="Rename resource &apos;setcokkie.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/setcokkie.html" name="setCookies.html" stamp="1674806119057" updateReferences="true"/>
+</session>

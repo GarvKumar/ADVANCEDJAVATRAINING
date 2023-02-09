@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p> Redirect to other Resource</p>
+ <a href="P_No15">Click Here</a>
+</body>
+</html>

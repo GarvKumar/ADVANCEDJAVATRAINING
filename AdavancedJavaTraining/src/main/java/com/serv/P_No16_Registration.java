@@ -1,0 +1,51 @@
+package com.serv;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class P_No16_Registration extends HttpServlet {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name=request.getParameter("name");
+		String password=request.getParameter("pass");
+		String email=request.getParameter("mail");
+		String phone=request.getParameter("mobile");
+		
+		String url="jdbc:mysql://localhost:3306/garv";
+		String uname="root";
+		String pass="root";
+		PrintWriter out=response.getWriter();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con=DriverManager.getConnection(url,uname,pass); //step3
+			String sql= "insert into user values(?,?,?,?)";
+			PreparedStatement ps= con.prepareStatement(sql);
+			ps.setString(1, name);
+			ps.setString(2, password);
+			ps.setString(3, email);
+			ps.setString(4, phone);
+			
+			int i=ps.executeUpdate();
+			if(i>0) {
+				out.print("Register Successfully");
+			}
+		} catch (Exception e) {
+			out.print(e);
+		}
+		
+	}
+
+}

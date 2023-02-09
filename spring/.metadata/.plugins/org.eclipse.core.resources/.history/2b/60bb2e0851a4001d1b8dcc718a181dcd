@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- now give tag definition  -->
+
+<!-- custom tag bean need definition <beans> -->
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+   
+
+<bean id='tyre' class = 'com.spn.springdemo1.Tyre'>
+  <property name='brand' value='mrf'></property>
+
+  <constructor-arg value='mrf'></constructor-arg>
+</bean>
+</beans>
+

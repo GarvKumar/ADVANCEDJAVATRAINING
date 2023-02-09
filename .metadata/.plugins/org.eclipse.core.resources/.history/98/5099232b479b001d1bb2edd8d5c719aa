@@ -1,0 +1,24 @@
+package garv;
+import java.sql.*;
+import java.util.*;
+public class createtableemployee {
+	public static void main(String []args) throws Exception
+	{
+
+	String url="jdbc:mysql://localhost:3306/garv";
+	String uname="root";
+	String pass="root";
+	String query="create table employees "+"(id integer not NULL, "+" first varchar(255), "+" last varchar(255), "+" age integer, "+" PRIMARY KEY (id))";
+	Class.forName("com.mysql.cj.jdbc.Driver");//step 2 class forname telusko
+	Connection con=DriverManager.getConnection(url,uname,pass); //step3
+	Statement st=con.createStatement(); //step4
+	ResultSet rs=st.executeUpdate(query); //step5
+
+	rs.next();
+	System.out.println("Created table in given database...");//step6
+
+	st.close();
+	con.close();//step7
+	
+	}
+}

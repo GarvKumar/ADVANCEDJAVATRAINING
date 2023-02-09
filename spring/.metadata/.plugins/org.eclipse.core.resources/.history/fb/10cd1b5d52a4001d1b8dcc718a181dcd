@@ -1,0 +1,14 @@
+package com.spn.SpringTestConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+public class sugarless {
+
+	public sugarless(String brand) {
+		
+		super();
+		System.out.println("constructor");
+	}
+	
+	
+}

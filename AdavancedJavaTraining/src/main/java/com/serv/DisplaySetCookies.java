@@ -1,0 +1,32 @@
+package com.serv;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class DisplaySetCookies extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
+	{
+		try { 
+			response.setContentType("text/html");  
+			    PrintWriter out = response.getWriter();  
+			      
+			    Cookie c1[]=request.getCookies();
+//			    Cookie c2[]=request.getCookies();
+			    out.println("<h1> Welcom back! "+c1[0].getValue()); 
+			    out.println("<h1> Email id : "+c1[1].getValue());
+			  
+			    out.close();  
+			  
+			         }catch(Exception e){System.out.println(e);
+			     }  
+			    }  
+			      
+			  
+		}
